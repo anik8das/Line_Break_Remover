@@ -1,6 +1,21 @@
 {
-    "name": "Getting Started Example",
+    "name": "Line Break remover",
     "version": "1.0",
-    "description": "Build an Extension!",
-    "manifest_version": 2
+    "description": "Remove Line Breaks when copying from PDFs!",
+    "background":{
+        "scripts": ["text.js"],
+        "persistent": false
+    },
+    "manifest_version": 2,
+    "commands": {
+        "copy" : {
+            "suggested_key": {
+                 "default": "Shift+Ctrl+X" 
+            },
+            "description": "Copy a text"
+        }
+    },
+    "permissions": [
+        "activeTab"
+      ]
 }

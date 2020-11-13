@@ -7,6 +7,12 @@
         "persistent": false
     },
     "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["ContentScript.js"]
+        }
+        ],
     "commands": {
         "copy" : {
             "suggested_key": {
@@ -16,6 +22,9 @@
         }
     },
     "permissions": [
-        "activeTab"
-      ]
+        "tabs",
+        "background",
+        "clipboardRead",
+        "clipboardWrite"
+      ]   
 }

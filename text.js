@@ -1,11 +1,9 @@
 
 chrome.commands.onCommand.addListener(function (command) {
     if (command === "copy") {
-        yo = window.getSelection().toString();
-        if(yo){
-            alert(yo)
-        }else{
-            alert("hi")
+        chrome.tabs.query({'currentWindow':true,'active':true}, function(tabs){
+            chrome.tabs.sendMessage(tabs[0].id,'hi');
+        })
         }
     }
-});
+);

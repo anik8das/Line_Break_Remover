@@ -7,3 +7,8 @@ A Chrome extension to leave out line breaks when copying from PDFs. Isn't it ann
 3. Enable developer mode (Top right toggle)
 4. Click on load unpacked and select the cloned folder
 5. Restart Chrome and try it out!
+
+### Update as of January 2021
+Chrome version 72 and above have added additional security measures for communication between Background and Content scripts for which a concrete solution hasn't been found yet:
+[StackOverflow link](https://stackoverflow.com/questions/54181734/chrome-extension-message-passing-unchecked-runtime-lasterror-could-not-establi)
+[Github link](https://github.com/MetaMask/metamask-extension/issues/9407)
